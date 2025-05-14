@@ -656,5 +656,35 @@ const products = [
       "apparel",
       "mens"
     ]
+  },{
+    id:"345opf76uyugj67jg86jg9ef94kf40dk49fk65",
+    image: "images/products/backpack.jpg",
+    name:"Black backpack",
+    rating: {
+      stars:3.5,
+      count:1553
+    },
+    priceCents: 3680,
+    keywords:[
+      "backpack",
+      "bag",
+      "unisex",
+      "spacious"
+    ]
+  },{
+    id:"54gj438ughr7548j84jf839gjtu794jf94j9fk8",
+    image: "images/products/umbrella.jpg",
+    name:"waterproof umbrella",
+    rating: {
+      stars:5,
+      count:10
+    },
+    priceCents: 2830,
+    keywords:[
+      "waterproof",
+      "umbrella",
+      "green",
+      "fold-out"
+    ]
   }
 ];
