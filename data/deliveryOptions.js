@@ -23,3 +23,20 @@ export function getDeliveryOption(deliveryOptionId) {
 
         return deliveryOption || deliveryOptions[0];
 }
+
+export function calculateDeliveryDate(deliveryOption){
+        let today = dayjs();
+        let days = deliveryOption.deliveryDays;
+        let count = 0;
+        let deliveryDate;
+        while(days){
+            days--;
+            count++;
+            deliverydate = today.add(count,'days');
+
+            if(deliveryDate === 'Saturday' || deliveryDate === 'Sunday'){
+                count++;
+            }
+        }
+        return deliveryDate;
+}
