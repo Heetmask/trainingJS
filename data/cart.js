@@ -1,3 +1,5 @@
+import { validateDeliveryOption } from "./deliveryOptions.js";
+
 export let cart;
 
 loadFromStorage();
@@ -50,7 +52,7 @@ let matchingItem;
         cart.push({
             productId:productId,
             quantity:1,
-            deliveyOptionId: '1'
+            deliveryOptionId: '1'
         });
     }
     saveToStorage();
@@ -98,7 +100,15 @@ export function updateDeliveryOption(productId,deliveryOptionId) {
           matchingItem = cartItem;
         }
     });
+if(!matchingItem){
+  return;
+}
 
+ 
+    if(!validateDeliveryOption(deliveryOptionId)){
+      return;
+    }
+    
 matchingItem.deliveryOptionId = deliveryOptionId;
 
 saveToStorage();
